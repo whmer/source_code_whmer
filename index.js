@@ -22,13 +22,14 @@ app.use(session({
 
 
 app.use('/login', express.static(path.join(__dirname, 'login')));
+app.use(express.static(path.join(__dirname, 'login')));
 
 
 app.use('/server', (req, res, next) => {
     if (req.session.userId) {
         next(); 
     } else {
-        res.redirect('/login/');
+        res.redirect('/login');
     }
 }, express.static(path.join(__dirname, 'server')));
 
