@@ -580,5 +580,18 @@ transition: 0.5s;
     overflow: hidden;
 }
 
+#theplaygamesty{
+    background: #ff0000;
+    color: #fff;
+    font-size: 20px;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    padding: 10px 40px;
+    border-radius: 3px;
+    font-family: var(--sam);
+    font-weight: 600;
+}
+
 
 
