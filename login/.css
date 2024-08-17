@@ -1,0 +1,14 @@
+nameanime {
+    overflow: hidden; 
+    white-space: nowrap; 
+    position: relative; 
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,157 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: sam;
+    font-style: normal;
+    src: url('../fonts/6c6374bad0b0b6d204d8d6dc4a18d820.woff') format("woff");
+}
+
+@font-face{
+    font-family: sam;
+    font-style: normal;
+    src: url('../fonts/6c6374bad0b0b6d204d8d6dc4a18d820.woff') format("woff");
+}
+
+:root{
+    --font: sam;
+}
+
+
+#over{
+    overflow: hidden;
+}
+
+.remote-saldo{
+    text-decoration: underline;
+    color: yellowgreen;
+    font-size: 18px;
+}
+
+.name-games{
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.bottom-games{
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+}
+
+.home, .image, .perfil, .saldo{
+    border-radius: 100%;
+    background: #000000;
+}
+
+.name-hen{
+    margin: 5px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+
+.files-hanime{
+    border-radius: 5px;
+}
+
+.depo-btn{
+    background: #ffffff;
+    color:#000000;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.top-painel{
+    position: fixed;
+    top: 0;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ffffff1c;
+    background: #000000;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.depo{
+    display: flex;
+    width: 50%;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.btn-saldo{
+    margin: 10px;
+}
+
+
+.game-nemurimoto{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    width: 13%; 
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .game-nemurimoto {
+        width: 40%;
+        margin: 1%;
+    }
+}
+.names-gaio{
+    color: #a8a8a8;
+    font-size: 15px;
+    line-height: 1.2;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    margin: 0; 
+}
+
+h4{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    overflow: hidden;
+    max-width: 200px;
+}
+
+.remover-form_log{
+    display: flex;
+    justify-content: space-around;
+}
+
+.namesamgamesty{
+    text-align: left;
+}
+
+.button-removert{
+    margin-top: 5px;
+}
+
+.renn{
+font-family: var(--font);
+}
+
+.btn-home{
+    font-size: 30px;margin: 0px;
+}

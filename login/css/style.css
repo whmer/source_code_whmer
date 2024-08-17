@@ -1,0 +1,584 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: sam;
+    font-style: normal;
+    src: url('../fonts/6c6374bad0b0b6d204d8d6dc4a18d820.woff') format("woff");
+}
+
+@font-face{
+    font-family: sam;
+    font-style: normal;
+    src: url('../fonts/6c6374bad0b0b6d204d8d6dc4a18d820.woff') format("woff");
+}
+
+:root{
+    --color: #93daf4;
+    --color-white: #ffffff;
+    ---color-black:#000000;
+    --font:sam;
+}
+
+body, html{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-family: var(--font);
+    font-weight: 600;
+    display:none;
+}
+
+.line{
+    background: #fff;
+    height: 2px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 5px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+@media(max-width:999px){
+    body, html{
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+label{
+    margin-left: 10px;
+}
+
+.inpust{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.btn-log-filer, .btn-log-filer-two{
+    font-size: 17px;
+    background: red;
+    cursor: pointer;
+    color: var(--color-white);
+    font-family: var(--font);
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.log-form-enter{
+    position: fixed;
+    display: none;
+    top: 35%;
+    left: 20px;
+    right: 20px;
+    width: 450px;
+    margin: 0 auto 10px;
+}
+
+.log{
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 20px;
+    right: 20px;
+    width: 450px;
+    margin: 0 auto 10px;
+}
+
+.extra-div {
+    padding: 10px;
+    top: 15%;
+    left: 20px;
+    right: 20px;
+    width: 450px;
+}
+
+.log-back{
+    background: #000000ae;
+    border-radius: 10px;
+    padding: 10px;
+    top: 35%;
+    left: 20px;
+    right: 20px;
+    width: 450px;
+}
+
+.input{
+    outline: none;
+    background: #0c0c0cd1;
+    padding: 8px 20px;
+    width: 100%;
+    border: 1px solid transparent;
+    font-family: var(--font);
+    font-size: 17px;
+    border-radius: 5px;
+    color: var(--color-white);
+    font-weight: 600;
+    transition: 0.5s;
+    border: 1px solid #ffffff5b;
+}
+
+.input-text-pass{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    overflow: hidden;
+    background: #0c0c0c7d;
+    border-radius: 5px;
+    height: 44px;
+    display: none;
+}
+
+input:focus{
+    transition: 0.5s;
+}
+
+.label_purple{
+    color: #800080;
+}
+
+.label_white{
+    color: var(--color-white);
+}
+
+input::selection{
+    color: red;
+}
+
+.name-log{
+    text-align: left;
+    width: 100%;
+}
+
+@media(max-width:999px){
+    .log{
+        width: 95%;
+    }
+}
+
+#dow{
+    background: #112229;
+    padding: 7px 10px;
+    border: none;
+    font-size: 14px;
+    border-radius: 10px;
+    color: var(--color-white);
+    font-family: var(--font);
+}
+
+.card{
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.btnapk{
+    margin-top: 5px;
+}
+
+.topapk{
+    border-bottom: 1px solid #ffffff5b;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+.namergamre-905mer{
+    width: 50%;
+}
+
+
+.mooo-gger{
+    padding: 5px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: none;
+    color:var(--color-white) ;
+    font-family: var(--font);
+    font-size: 17px;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+}
+
+.fles-nameer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nameanime {
+    white-space: nowrap;
+    position: ; 
+}
+
+.files-name-orige{
+    position: relative;
+}
+
+
+
+.view{
+    background: transparent;
+    color: var(--color-white);
+    font-family: var(--font);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.view:hover{
+opacity: 0.7;
+transition: 0.5s;
+}
+
+.anime-name{
+    width: 75%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.tfones{
+    margin-left: 5px;
+    width:20px;
+}
+
+.input-login{
+    width: 100%;
+}
+
+.input-pass{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    background: #0c0c0cd1;
+    border-radius: 5px;
+    height: 44px;
+    border: 1px solid #ffffff6d;
+}
+
+.account{
+    text-decoration: none;
+    color: #074ebf;
+    font-weight: 600;
+}
+
+.btn-pass{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.hanime{  
+     transform: translateX(100%);
+     margin-top: 10px;
+     font-size: 17px;
+     color: #fff;
+     animation: --anime-name 8s linear infinite; /* animation: slide-in 6s linear infinite; */
+}
+
+@keyframes --anime-name{
+    100%{
+       transform: translateX(-470%);
+    }
+}
+
+.name, .value {
+    display: inline-block; 
+    position: relative; 
+    white-space: nowrap; 
+}
+
+.text-pass{
+    display: none;
+}
+
+.password{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+}
+
+.password:hover{
+    border: none;
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+
+.name-link{
+    margin-left: 5px;
+}
+
+
+
+#border{
+    border: 1px solid var(--color-white);
+    color: yellowgreen;
+    text-decoration: underline;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 2px 20px;
+}
+
+.Screenshot_92{
+    height: 20vh;
+    width: 100%;
+}
+
+
+.depos > div{
+    margin: 10px;
+}
+
+.depos{
+    width: 100%;
+    display: flex;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+.name{
+    font-size: 30px;
+}
+
+.topfixed{
+    display: flex;
+    position: fixed;
+    height: 66px;
+    left: 0;
+    right: 0;
+    width: 450px;
+    margin: 0 auto 10px;
+    justify-content: space-between;
+    background: #112229;
+    overflow: hidden;
+}
+
+@media(max-width:999px){
+    .topfixed{
+        width: 100%;
+    }
+}
+
+
+.remover-log{
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#p_erro, #p_errotwo{
+    display:none;
+    animation: --p-erro 0.5s ease;
+    transition: 0.5s;
+}
+
+@keyframes --p-erro{
+    from{
+        transform: translateY(-3px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.sam-sanime{
+    width: 100%;
+    height: 20vh;
+}
+
+
+.label-btn-pro{
+    display: flex;
+    margin-top: -50%;
+    justify-content: center;
+    width: 100%;
+}
+
+.radiu-label{
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.radiu-label:hover{
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+.radio-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .free{
+    margin-left: 0;
+}
+#radio2:checked ~ .free{
+    margin-left: -25%;
+}
+#radio3:checked ~ .free{
+    margin-left: -50%;
+}
+#radio4:checked ~ .free{
+    margin-left: -275%;
+}
+
+.line{
+    background: #fff;
+    height: 2px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 5px;
+    width: 20px;
+}
+
+.btn-home{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+}
+
+.divs{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.home-view{
+    width: 20%;
+    border-right: 1px solid #a8a8a8;
+    padding: 5px 5px 40px;
+    text-align: left;
+    margin: 5px;
+}
+
+.names-btn-home{
+    position: fixed;
+    background: #000000;
+    color: #ffffff;
+    text-align: left;
+    width: 320px;
+    top:65px;
+    border-right: 1px solid #a8a8a88b;
+    height: 100vh;
+    box-shadow: 0 2px 20px 5px #000;
+}
+
+.div-games-hentai-hanime{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border-top-left-radius: 20px; border-top-right-radius: 20px;
+}
+@media(max-width:999px){
+    .div-games-hentai-hanime{
+        margin-top: 55%;
+    }
+}
+.back-hidden{
+    display: block;
+    position: fixed;
+    left: 0;
+}
+
+@media(max-width:999px){
+    .names-btn-home{
+    position: fixed;
+    background: #000;
+    color: #fff;
+    text-align: left;
+    width: 250px;
+    top: 65px;
+    height: 100vh;
+    border-right: 1px solid rgb(94, 0, 128);
+    animation: --anime-home 0.5s ease-in;
+    }
+    .back-hidden{
+        background-color: #00000074;
+        position: fixed;
+        top: 65px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        display: none;
+    }
+}
+
+@keyframes --anime-home{
+    from{
+        left: -450px;
+        transition: 0.5s;
+    }
+    to{
+        left: 0;
+    }
+}
+
+
+.name-account{
+    border-bottom: 1px solid  #ffffff5b;
+    margin: 10px;
+}
+
+.home-1{
+    margin: 10px;
+    padding: 10px;
+    cursor:pointer;
+    border-radius: 7px;
+    transition: 0.5s;
+    font-size: 15px;
+    display: flex;
+}
+
+.select{
+    background: #151515;
+}
+
+.home-1:hover{
+    background: #151515;
+    transition: 0.5s;
+}
+
+#over{
+    overflow: hidden;
+}
+
+
+
