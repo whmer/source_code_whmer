@@ -105,13 +105,13 @@ body{
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    margin: 20% auto 10px;
+    margin: 5% auto 10px;
     text-align: center;
 }
 
 @media(max-width:999px){
     .div-games-hentai-hanime{
-        margin-top: 55%;
+        margin-top: 10%;
     }
 }
 

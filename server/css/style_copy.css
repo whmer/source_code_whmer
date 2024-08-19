@@ -24,24 +24,21 @@
 }
 
 body{
-    color: #fff;
-    background: #000;
     align-items: center;
-    font-weight: 600;
     text-align: center;
-    max-width: 90%;
-    width: 90%;
-    margin: 0 auto 10px;
-    font-family: var(--font);
-    transition: 0.5s;
     display:  none;
+    color: #fff;
+    background-color: #000;
+    font-weight: 600;
 }
 
 @media(max-width:999px){
     body, html{
         max-width: 100%;
         width: 100%;
-        display: block;
+        display: flex;
+        position: relative;
+        margin: 0;
     }
 }
 

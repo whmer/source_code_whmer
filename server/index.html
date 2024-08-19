@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hanime.css">
     <link rel="stylesheet" href="css/style_copy.css">
+    <link rel="stylesheet" href="css/slider.css"/>
     <title>Whmer Society Games</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -60,6 +61,254 @@
     </script>
 </head>
 <body>
+    <div class="container">
+        <div id="slider-top">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="https://telegra.ph/file/e56b438be5aff41879687.jpg" alt="Imagem 1"></div>
+                    <div class="slide"><img src="https://telegra.ph/file/19d7ed2f20d0ff6ac3c4c.jpg" alt="Imagem 2"></div>
+                    <div class="slide"><img src="https://telegra.ph/file/4f7aa2f9bcfe5ff4e5e77.png" alt="Imagem 4"></div>
+                    <div class="slide"><img src="https://telegra.ph/file/9208e0700812cd214eaa1.jpg" alt="Imagem 5"></div>
+                    <div class="slide"><img src="https://telegra.ph/file/793f04c4c07f37b68553c.jpg" alt="Imagem 6"></div>
+                </div>
+                <div class="controls">
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
+                </div>
+            </div>
+            <div class="files-name-orige">
+                <div class="tfones">
+                    <img src="https://telegra.ph/file/1c08a804d35fc6705b495.gif" width="70"/>
+                </div>
+            <div class="anime-name">
+            <div class="nameanime">
+                <h5 class="hanime" style="color: #fff; font-size: 14px;"></h5>
+            </div><br>
+            <div class="logocreator">
+                <a href="" id="logoggty">
+                    <img src="https://img.icons8.com/?size=100&id=30998&format=png&color=000000" width="30"/>
+                </a>
+                <a href="" id="logoggty">
+                    <img src="https://img.icons8.com/?size=100&id=63306&format=png&color=000000" width="30"/>
+                </a>
+                <a href="" id="logoggty">
+                    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" width="30"/>
+                </a>
+                <a href="" id="logoggty">
+                    <img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" width="30"/>
+                </a>
+            </div>
+        </div>
+        <script>
+            const divty = document.querySelector('.hanime');
+            const name_gree = 'Whmer Games';
+            divty.innerHTML += `<span class="name-link">Welcome to<span class="name-link" style="color:orange"> ${name_gree}</span>. </span>`;
+            divty.innerHTML += `<span class="name-link"> Invite friends to play! Official website <img src="https://telegra.ph/file/01a2cadbb6090dead1234.gif" width="20" title="hentai"/> <span style="color:green; font-weight:600;">https://source-code-whmer.onrender.com/</span> </span>`;
+            divty.innerHTML += '<span class="name-link">🎁 Come in and play free porn games.</span>';
+        </script>
+            </div>
+            <style>
+                .container {
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+#logoggty{
+    text-decoration: none;
+    margin: 5px;
+}
+
+.nameanime{
+    margin-top: 20px;
+}
+
+.files-name-orige{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -20px;
+}
+
+#slider-top {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-top:70px;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    height: 20vh;
+    border-radius: 5px;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display:none;
+}
+
+.controls span {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    pointer-events: all;
+    user-select: none;
+}
+
+.controls .prev {
+    left: 10px;
+}
+
+.controls .next {
+    right: 10px;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dots .active {
+    background-color: #717171;
+}
+
+@media (max-width: 768px) {
+    .controls span {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+            </style>
+        </div>
+        <!--  -->
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            let autoSlideInterval;
+            let startX, isDragging = false;
+    
+            document.querySelector('.next').addEventListener('click', () => {
+                clearInterval(autoSlideInterval);
+                nextSlide();
+                autoSlideInterval = setInterval(nextSlide, 3000);
+            });
+    
+            document.querySelector('.prev').addEventListener('click', () => {
+                clearInterval(autoSlideInterval);
+                prevSlide();
+                autoSlideInterval = setInterval(nextSlide, 3000);
+            });
+    
+            slides.addEventListener('touchstart', handleTouchStart, false);
+            slides.addEventListener('touchmove', handleTouchMove, false);
+            slides.addEventListener('mousedown', handleMouseDown, false);
+            slides.addEventListener('mousemove', handleMouseMove, false);
+            slides.addEventListener('mouseup', handleMouseUp, false);
+            slides.addEventListener('mouseleave', handleMouseUp, false);
+    
+            function handleTouchStart(event) {
+                startX = event.touches[0].clientX;
+            }
+    
+            function handleTouchMove(event) {
+                if (!startX) return;
+    
+                let moveX = event.touches[0].clientX;
+                let diffX = startX - moveX;
+    
+                if (Math.abs(diffX) > 50) {
+                    clearInterval(autoSlideInterval);
+                    if (diffX > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    autoSlideInterval = setInterval(nextSlide, 3000);
+                    startX = null;
+                }
+            }
+    
+            function handleMouseDown(event) {
+                startX = event.clientX;
+                isDragging = true;
+            }
+    
+            function handleMouseMove(event) {
+                if (!isDragging) return;
+    
+                let moveX = event.clientX;
+                let diffX = startX - moveX;
+    
+                if (Math.abs(diffX) > 50) {
+                    clearInterval(autoSlideInterval);
+                    if (diffX > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    autoSlideInterval = setInterval(nextSlide, 3000);
+                    isDragging = false;
+                }
+            }
+    
+            function handleMouseUp(event) {
+                isDragging = false;
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+    
+            function updateSlider() {
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            autoSlideInterval = setInterval(nextSlide, 3000);
+        </script>
     <div class="top-painel" id="backpainel">
         <div class="home-view">
             <div class="divs">
@@ -120,160 +369,9 @@ window.addEventListener('scroll', function() {
             <br>
         </div>
     </div>
-        <div class="topfiles" id="topfilesDiv">
-        <div class="slider">
-            <div class="slides">
-                <div class="sanime89 free">
-                    <img src="https://telegra.ph/file/4f7aa2f9bcfe5ff4e5e77.png"  id="radio1" class="sam-sanime" alt="Image-1"/>
-                </div>
-                <div class="sanime89">
-                    <img src="https://telegra.ph/file/19d7ed2f20d0ff6ac3c4c.jpg"  id="radio2" class="sam-sanime" alt="Image-1"/>
-                </div>
-                <div class="sanime89">
-                    <img src="https://telegra.ph/file/793f04c4c07f37b68553c.jpg"  id="radio3" class="sam-sanime" alt="Image-3"/>
-                </div>
-                <div class="sanime89">
-                    <img src="https://telegra.ph/file/e56b438be5aff41879687.jpg"  id="radio4" class="sam-sanime" alt="Image-4"/>
-                </div>
-                <div class="sanime89">
-                    <img src="https://telegra.ph/file/9208e0700812cd214eaa1.jpg"  id="radio5" class="sam-sanime" alt="Image-5"/>
-                </div>
-                <div class="files-name-orige">
-                    <div class="tfones">
-                        <img src="https://telegra.ph/file/1c08a804d35fc6705b495.gif" width="70"/>
-                    </div>
-                <div class="anime-name">
-                <div class="nameanime">
-                    <h5 class="hanime" style="color: #fff; font-size: 14px;"></h5>
-                </div>
-            </div>
-            <script>
-                const div = document.querySelector('.hanime');
-//const valor_red = 'R$555,00';
-const name_gree = 'Whmer Games';
-div.innerHTML += `<span class="name-link">Welcome to<span class="name-link" style="color:orange"> ${name_gree}</span>. </span>`;
-div.innerHTML += `<span class="name-link"> Invite friends to play! Official website 👉<span style="color:green; font-weight:600;">https://https://whmergames.com</span> </span>`;
-div.innerHTML += '<span class="name-link">🎁 Come in and play free porn games.</span>';
-            </script>
-                </div>
-            </div>
-                <!--forwards-->
-            <style>
 
-.slider {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 5px auto;
-    justify-content: center;
-}
-
-    .topfiles{
-    position: fixed;
-    overflow: hidden;
-    height: 20vh;
-    background-color: none;
-    left: 0;
-    right: 0;
-    top: 65px;
-    width:750px;
-    justify-content: center;
-    margin: 0 auto 10px;
-    border-bottom: 1px solid #ffffff46;
-    transition: opacity 0.2s ease-out;
-}
-
-@media(max-width:999px){
-    .topfiles{
-        width: 100%;
-    }
-
-}
-
-   .files-name-orige{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: none;
-}
-
-.sam-sanime{
-    width: 100%;
-    height: 100%;
-}
-    .slides{
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    background-color: none;
-    justify-content: center;
-}
-
-.sanime89{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: 0.5s;
-    left: 100%;
-    display: none;
-}
-.sanime89 img{
-    width: 100%;
-    transition: 0.1s;
-    object-fit: cover;
-}
-                
-    .show {
-    display: block;
-    animation: slidein 0.1s forwards ;
-}
-
-@keyframes slidein {
-    from { left: 100%; }
-    to { left: 0; }
-}
-
-            </style>
-            <script>
-            let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("sanime89");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].classList.remove("show");
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].classList.add("show");
-    setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
-}
-
-            </script>
-            <script>
-                let count = 1;
-                document.getElementById('radio122').checked = true;
-
-                setInterval( function(){
-                    nextImage();
-                }, 5000)
-
-                function nextImage(){
-                    count ++;
-                    if(count>4){
-                        count = 1
-                    }
-                    document.getElementById('radio' + count).checked = true
-                }
-            </script>
-        </div>
-        </div>
+    <!-- slider -->
+    <!-- slider -->
         <div class="back-hidden" id="hiddenDiv">
         <div class="names-btn-home" id="left-home">
             <div class="backanimer">
@@ -745,27 +843,6 @@ function showSlides() {
                 <br><br>
             </div>
         </div>
-        </div>
-        <script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].classList.remove("show");
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].style.left = "100%";  
-    slides[slideIndex - 1].classList.add("show");
-    setTimeout(showSlides, 3000); 
-}
-
-
-        </script>
     <div class="div-games-hentai-hanime" id="games_hahanime">
         <style>
         </style>
@@ -952,8 +1029,6 @@ function showSlides() {
 </div>
 
 <!---->
- 
-        </div>
         <script>
                 async function getUserIP() {
             try {
@@ -977,7 +1052,6 @@ function showSlides() {
     <style>
     </style>
     <div class="imagehentaidiv" id="fleximaui">
-        <br><br><br><br><br><br><br><br><br><br><br>
         <div class="divimagehanime">
             <img src="https://telegra.ph/file/38d9d3425f550d9af27cb.png" class="imagedivsdow"/><br>
   </div>
@@ -1106,11 +1180,8 @@ function showSlides() {
 
         </style>
     </div>
-    <div class="home-htnl-very">  
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
+    <div class="home-htnl-very"> 
+        <br><br>
         <div class="fsdfedfas">
             <div class="nasdmrwedfe">
                 <img src="https://telegra.ph/file/f27810e6c70051cfc7656.jpg" width="80" style="border-radius: 5px;"/>
@@ -1252,5 +1323,6 @@ function showSlides() {
        </div>
         </div>
     </div>
+</div>
 </body>
 </html>
