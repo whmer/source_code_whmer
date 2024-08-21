@@ -107,6 +107,159 @@
             divty.innerHTML += '<span class="name-link">🎁 Come in and play free porn games.</span>';
         </script>
             </div>
+
+            <!---->
+            <div class="videporner">
+                <style>
+                    .button {
+                        padding: 10px;
+                        font-size: 18px;
+                        cursor: pointer;
+                        border-radius: 100%;
+                        border: none;
+                        background-color: rgb(2, 125, 226);
+                        margin: 3px;
+                    }
+                    .results {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 20px;
+                        margin-top: 20px;
+                    }
+                    .video {
+                        text-align: center;
+                    }
+                    .iframe {
+                        width: 100%;
+                        height: 180px;
+                    }
+                    @media (min-width: 768px) {
+                        .iframe {
+                            height: 250px;
+                        }
+                    }
+            
+                    .iframe{
+                        border: 1px solid #ffffff60;
+                        width: 100%;
+                    }
+            
+                    .ion-icon{
+                        font-size: 20px;color: red;
+                    }
+                    .viewsiframe{
+                        text-align: left;
+                        background-color: rgba(29, 28, 28, 0.822);
+                        width: 90%;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                        color: #ffffff60;
+                        padding: 3px;
+                    }
+            
+                    .viewrty{
+                        display: flex;
+                        width: 100%;
+                        text-align: left;
+                        margin-left: 10px;
+                        margin-top: -2px;
+                    }
+        
+                    .videporner{
+                        margin-top: 30px;
+                    }
+                    .ion{
+                        margin-top: 3px;
+                    }
+            
+                    .viewrui{
+                        margin-left: 5px;
+                    }
+                    .lenght{
+                        display: flex;
+                        margin-left: 20px;
+                    }
+                    .ggregerg{
+                        display: flex;
+                        width: 90%;
+                        justify-content: space-between;
+                        background-color: rgb(20, 20, 20);
+                        border-radius: 5px;
+                        text-align: left;
+                        margin: 0 auto 10px;
+                    }
+            
+                    .nineteen{
+                        color: red;
+                line-height: 1.2;
+                text-align: center;
+                max-width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                white-space: nowrap;
+                margin:0;
+                    }
+                </style>
+                <center>
+                <h1>Search Videos</h1>
+                <div class="ggregerg">
+                    <div class="inputytyty">
+                        <input type="text" id="searchQuery" placeholder="Enter search term..." />
+                    </div>
+                    <div class="butyghfdo">
+                <button class="button" onclick="searchVideos()">🔎</button>
+                    </div>
+                </div>
+            </center>
+            
+                <div class="results" id="results"></div>
+            
+                <script>
+                    async function searchVideos() {
+                        const query = document.getElementById('searchQuery').value;
+                        const apiUrl = `https://www.eporner.com/api/v2/video/search/?query=${encodeURIComponent(query)}&per_page=20`;
+            
+                        try {
+                            const response = await fetch(apiUrl);
+                            const data = await response.json();
+                            const resultsDiv = document.getElementById('results');
+                            resultsDiv.innerHTML = ''; // Clear previous results
+            
+                            if (data.videos && data.videos.length > 0) {
+                                data.videos.forEach(video => {
+                                    const videoDiv = document.createElement('div');
+                                    videoDiv.classList.add('video');
+                                    videoDiv.innerHTML = `
+                                        <h3 class="nineteen">${video.title}</h3>
+                                        <iframe class="iframe" src="${video.embed.replace('autoplay=0', 'autoplay=1')}" frameborder="0" allowfullscreen></iframe>
+                                        <div class="viewsiframe">
+                                                    <p style="margin-left:10px;">Tr4umph whmer games</p>
+                                            <div class="viewrty">
+                                                <div class="ion">
+                                                    <ion-icon class="ion-icon" name="eye-outline"></ion-icon></div>
+                                                <div class="viewrui"><p> ${video.views}</p></div>
+                                                <div class="lenght">
+                                                <div class="ion"><ion-icon class="ion-icon" name="time-outline"></ion-icon></div>
+                                                <div class="viewrui"><p> ${video.length_min}</p></div>
+                                                    </div>
+                                                </div>
+                                                </div>                                  
+                                    `;
+                                    resultsDiv.appendChild(videoDiv);
+                                });
+                            } else {
+                                resultsDiv.innerHTML = '<p>No videos found.</p>';
+                            }
+                        } catch (error) {
+                            console.error('Error fetching the videos:', error);
+                        }
+                    }
+                </script>
+            </div>
+        <br><br>
+    
+
+
             <style>
                 .container {
     width: 100%;
@@ -117,6 +270,10 @@
 #logoggty{
     text-decoration: none;
     margin: 5px;
+}
+
+.videporner{
+    display: none;
 }
 
 .nameanime{
@@ -396,22 +553,22 @@ window.addEventListener('scroll', function() {
                     <p style="font-size: 12px; margin-top: 4px;" id="active-connections">Loading...</p>
                     <p style="font-size: 12px;margin-top: 4px;" id="active-ip">Loading...</p></h4>
                     <script>
-                        // Função para atualizar o status
+
                         function updateStatus() {
                             const statusElement = document.getElementById('status_user');
                             if (navigator.onLine) {
                                 statusElement.textContent = 'Online';
-                                statusElement.style.color = 'green'; // Cor cinza
+                                statusElement.style.color = 'green'; 
                             } else {
                                 statusElement.textContent = 'Offline';
-                                statusElement.style.color = 'red'; // Cor vermelha para indicar offline
+                                statusElement.style.color = 'red'; 
                             }
                         }
                 
-                        // Verifica o status da conexão ao carregar a página
+
                         window.addEventListener('load', updateStatus);
                 
-                        // Atualiza o status quando a conexão muda
+
                         window.addEventListener('online', updateStatus);
                         window.addEventListener('offline', updateStatus);
                     </script>
@@ -474,6 +631,7 @@ window.addEventListener('scroll', function() {
     var games_hahanime = document.getElementById('games_hahanime');
     if (dov.style.display === 'none' || dov.style.display === '') {
         dov.style.display = 'flex';
+        document.querySelector('.videporner').style.display = 'none';
         home_htnl_very.style.display = 'none';
         games_hahanime.style.display = 'none';
     } else {
@@ -499,6 +657,7 @@ window.addEventListener('scroll', function() {
     var dovio = document.getElementById('fleximaui');
     if (games_hahanime.style.display === 'none' || games_hahanime.style.display === '') {
         games_hahanime.style.display = 'flex';
+        document.querySelector('.videporner').style.display = 'none';
         dovio.style.display = 'none';
         home_htnl_very.style.display = 'none';
     } else {
@@ -512,7 +671,7 @@ window.addEventListener('scroll', function() {
             </div>
             <div class="home-1" id="tyvidf">
                 <div class="icoico"><span><ion-icon name="telescope"></ion-icon></span></div>
-                <div class="namehomeico"><h4 id="fvideos">Videos<span id="spanNot"> Not a Vídeos!</span><br>
+                <div class="namehomeico"><h4 id="fvideos">Videos<span id="spanNot"> Search videos</span><br>
                     <style>
                         #spanNot{
                         font-size: 12px; color: red; display:none; transition: 0.5s; animation: --animeet 0.5s ease-in;
@@ -535,6 +694,10 @@ window.addEventListener('scroll', function() {
                             var spanNot = document.getElementById('spanNot')
                             if(spanNot.style.display === 'none' || spanNot.style.display === ''){
                                 spanNot.style.display = 'contents';
+                                document.querySelector('.videporner').style.display = 'block';
+                            document.getElementById('games_hahanime').style.display = 'none';
+                            document.querySelector('.home-htnl-very').style.display = 'none';
+                            document.getElementById('fleximaui').style.display = 'none';
                                 setTimeout(removerSpanErro, 2000);
                             } else{
                                 spanNot.style.display = 'none'
@@ -548,6 +711,7 @@ window.addEventListener('scroll', function() {
                             document.getElementById('games_hahanime').style.display = 'none';
                             document.querySelector('.home-htnl-very').style.display = 'block';
                             document.getElementById('fleximaui').style.display = 'none';
+                            document.querySelector('.videporner').style.display = 'none';
 
                         })
                     </script>
@@ -1262,6 +1426,7 @@ window.addEventListener('scroll', function() {
                 position: relative;
             }
     </style>
+    <!--div-->
     <br><br>
     <div class="bottom-loys">
         <div class="accountssd">
