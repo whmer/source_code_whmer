@@ -296,7 +296,7 @@ transition: 0.5s;
 
 @keyframes --anime-name{
     100%{
-       transform: translateX(-470%);
+       transform: translateX(-360%);
     }
 }
 
