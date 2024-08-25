@@ -273,14 +273,11 @@ margin: 5px;
                         const sound = document.getElementById('sound');
                 
                         imageContainer.addEventListener('click', () => {
-                            // Muda a imagem
                             if (image.src.includes('https://telegra.ph/file/d534b3c6ebacc07f686eb.jpg')) {
                                 image.src = 'https://telegra.ph/file/9982e9295b6e869e3dd26.jpg';
                             } else {
                                 image.src = 'https://telegra.ph/file/d534b3c6ebacc07f686eb.jpg';
                             }
-                
-                            // Toca o som
                             sound.play();
                         });
                     </script>

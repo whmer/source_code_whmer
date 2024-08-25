@@ -107,7 +107,7 @@ label{
 
 .input{
     outline: none;
-    background: #0c0c0cd1;
+    background: #252525d1;
     padding: 8px 20px;
     width: 70%;
     border: 1px solid transparent;
@@ -280,7 +280,7 @@ transition: 0.5s;
 
 @keyframes --anime-name{
     100%{
-       transform: translateX(-470%);
+       transform: translateX(-260%);
     }
 }
 

@@ -27,8 +27,9 @@ body{
     font-family: var(--font);
     padding: 10px;
     width: 100%;
-    font-size: 19px;
-    background-color: #00000060;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #17101daf;
     margin: 3px 10px;
     border: none;
     outline: none;

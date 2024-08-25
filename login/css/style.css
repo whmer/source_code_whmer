@@ -33,6 +33,11 @@ body, html{
     display:none;
 }
 
+button{
+    font-family: var(--sam);
+    font-weight: 600;
+}
+
 .line{
     background: #fff;
     height: 2px;
