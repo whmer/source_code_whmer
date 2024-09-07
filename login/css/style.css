@@ -30,7 +30,6 @@ body, html{
     width: 100%;
     font-family: var(--font);
     font-weight: 600;
-    display:none;
 }
 
 button{
